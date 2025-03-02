@@ -1,0 +1,16 @@
+/* Main CSS file that imports all other CSS files */
+
+/* Import base styles */
+@import 'styles.css';
+
+/* Import component styles */
+@import 'portfolio.css';
+@import 'services.css';
+@import 'contact.css';
+@import 'footer.css';
+
+/* Import dark mode styles */
+@import 'dark-mode.css';
+
+/* Import responsive styles */
+@import 'responsive.css';

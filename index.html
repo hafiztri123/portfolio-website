@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hafizh | Fullstack Developer</title>
+    <!-- Main CSS file that imports all other CSS files -->
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header id="header">
+        <div class="container">
+            <nav>
+                <div class="logo">Hafizh's <span>Portfolio</span></div>
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <div class="hamburger">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="shapes">
+            <div class="shape circle"></div>
+            <div class="shape triangle"></div>
+            <div class="shape square"></div>
+            <div class="shape circle"></div>
+        </div>
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-subtitle">Hello, I'm</div>
+                <h1 class="hero-title">Hafizh</h1>
+                <p class="hero-description">A passionate Full-Stack Web Developer creating modern and responsive web
+                    applications with seamless user experiences.</p>
+                <div class="hero-cta">
+                    <a href="#portfolio" class="btn">View My Work</a>
+                    <a href="#contact" class="btn btn-secondary">Contact Me</a>
+                </div>
+                <div class="social-icons">
+                    <a href="https://github.com/hafiztri123" class="social-icon">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/hafizh-tri1/" class="social-icon">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://x.com/HafizhDev" class="social-icon">
+                        <i class="fa-brands fa-twitter"></i>
+                    </a>
+                    <a href="mailto:hafiz.triwahyu@gmail.com" class="social-icon">
+                        <i class="fa-solid fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about section">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="./Pas Foto.jpg" alt="Profile Image">
+                </div>
+                <div class="about-text">
+                    <h3>Hi, My name is Hafizh</h3>
+                    <p>I'm an aspiring Fullstack Developer with a background in psychology, looking to transition into
+                        the tech industry.
+                        I'm particularly drawn to backend development while also comfortable working with frontend
+                        technologies.</p>
+                    <p>During my studies, I've been teaching myself programming through online courses and personal
+                        projects. I find
+                        software engineering exciting because it constantly presents new challenges and learning
+                        opportunities. The
+                        problem-solving aspects of coding align well with my analytical skills from psychology.</p>
+                    <p>I'm eager to gain real-world experience through an internship or junior-level position where I
+                        can contribute while
+                        continuing to grow my technical skills. When I'm not coding, you can find me hiking, reading
+                        tech blogs, or
+                        experimenting with new development tools and frameworks.</p>
+                    <div class="skills">
+                        <span class="skill">JavaScript</span>
+                        <span class="skill">React</span>
+                        <span class="skill">Tailwind CSS</span>
+                        <span class="skill">Golang</span>
+                        <span class="skill">PHP</span>
+                        <span class="skill">Java</span>
+                        <span class="skill">Python</span>
+                        <span class="skill">PostgreSQL</span>
+                        <span class="skill">MySQL</span>
+                        <span class="skill">MongoDB</span>
+                        <span class="skill">Redis</span>
+                        <span class="skill">Docker</span>
+                        <span class="skill">Elastisearch</span>
+                        <span class="skill">Logstash</span>
+                        <span class="skill">Kibana</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio section">
+        <div class="container">
+            <h2 class="section-title">My Portfolio</h2>
+            <div class="portfolio-filter">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="web">Web Development</button>
+                <button class="filter-btn" data-filter="mobile">Mobile Apps</button>
+                <button class="filter-btn" data-filter="ui">UI/UX Design</button>
+            </div>
+            <div class="portfolio-grid" id="portfolioGrid">
+                <!-- Portfolio items will be dynamically added here from portfolio-data.js -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Modal -->
+    <div class="modal" id="portfolioModal">
+        <div class="modal-content">
+            <button class="modal-close">&times;</button>
+            <div class="modal-header">
+                <div class="modal-category" id="modalCategory"></div>
+                <h3 class="modal-title" id="modalTitle"></h3>
+            </div>
+            <div class="modal-body">
+                <div class="modal-image">
+                    <img id="modalImage" src="" alt="Project Image">
+                </div>
+                <div class="modal-text" id="modalDescription"></div>
+                <div class="modal-details">
+                    <div class="modal-detail-item">
+                        <h5>Client</h5>
+                        <p id="modalClient"></p>
+                    </div>
+                    <div class="modal-detail-item">
+                        <h5>Date</h5>
+                        <p id="modalDate"></p>
+                    </div>
+                    <div class="modal-detail-item">
+                        <h5>Technologies</h5>
+                        <p id="modalTechnologies"></p>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <a href="#" class="btn" id="modalLiveLink" target="_blank">View Live</a>
+                    <a href="#" class="btn btn-secondary" id="modalGithubLink" target="_blank">GitHub Repo</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Services Section -->
+    <section id="services" class="services section">
+        <div class="container">
+            <h2 class="section-title">My Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fa-solid fa-code"></i>
+                    </div>
+                    <h3 class="service-title">Web Development</h3>
+                    <p class="service-description">Creating responsive and performant web applications using modern
+                        technologies and best practices.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fa-solid fa-server"></i>
+                    </div>
+                    <h3 class="service-title">Backend Development</h3>
+                    <p class="service-description">Building robust server-side applications, APIs, and database systems
+                        that power your digital solutions.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fa-solid fa-mobile-screen"></i>
+                    </div>
+                    <h3 class="service-title">Responsive Design</h3>
+                    <p class="service-description">Crafting websites that look and perform beautifully across all
+                        devices and screen sizes.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fa-solid fa-database"></i>
+                    </div>
+                    <h3 class="service-title">Database Design</h3>
+                    <p class="service-description">Designing efficient and scalable database structures for optimal data
+                        management and retrieval.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fa-solid fa-rocket"></i>
+                    </div>
+                    <h3 class="service-title">Performance Optimization</h3>
+                    <p class="service-description">Improving the speed and efficiency of your web applications for
+                        better user experience and SEO.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fa-solid fa-code-branch"></i>
+                    </div>
+                    <h3 class="service-title">API Development</h3>
+                    <p class="service-description">Creating RESTful and GraphQL APIs to connect your applications and
+                        services seamlessly.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact section">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-info-item">
+                        <div class="contact-info-icon">
+                            <i class="fa-solid fa-location-dot"></i>
+                        </div>
+                        <div class="contact-info-text">
+                            <h4>Location</h4>
+                            <p>Indonesia, Jakarta</p>
+                        </div>
+                    </div>
+                    <div class="contact-info-item">
+                        <div class="contact-info-icon">
+                            <i class="fa-solid fa-envelope"></i>
+                        </div>
+                        <div class="contact-info-text">
+                            <h4>Email</h4>
+                            <p>hafiz.triwahyu@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-info-item">
+                        <div class="contact-info-icon">
+                            <i class="fa-solid fa-phone"></i>
+                        </div>
+                        <div class="contact-info-text">
+                            <h4>Phone</h4>
+                            <p>+6285156081841</p>
+                        </div>
+                    </div>
+                    <div class="contact-info-item">
+                        <div class="contact-info-icon">
+                            <i class="fa-solid fa-clock"></i>
+                        </div>
+                        <div class="contact-info-text">
+                            <h4>Working Hours</h4>
+                            <p>Monday - Friday: 8am - 5pm</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <input type="text" name="name" class="form-control" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" name="email" class="form-control" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="subject" class="form-control" placeholder="Subject" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea name="message" class="form-control" placeholder="Your Message"
+                                required></textarea>
+                        </div>
+                        <button type="submit" class="btn">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <div class="footer-logo">Hafizh's <span>Portfolio</span></div>
+                    <p class="footer-text">A passionate fullstack developer focused on creating clean, user-friendly
+                        experiences for my clients.</p>
+                    <div class="footer-social">
+                        <a href="https://github.com/hafiztri123" class="footer-social-icon">
+                            <i class="fa-brands fa-github"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/hafizh-tri1/" class="footer-social-icon">
+                            <i class="fa-brands fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://x.com/HafizhDev" class="footer-social-icon">
+                            <i class="fa-brands fa-twitter"></i>
+                        </a>
+                        <a href="https://www.instagram.com/hafiztriw/" class="footer-social-icon">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-links-container">
+                    <h4 class="footer-title">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#portfolio">Portfolio</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4 class="footer-title">Contact Info</h4>
+                    <div class="footer-contact-item">
+                        <div class="footer-contact-icon">
+                            <i class="fa-solid fa-location-dot"></i>
+                        </div>
+                        <p>Jakarta, Indonesia</p>
+                    </div>
+                    <div class="footer-contact-item">
+                        <div class="footer-contact-icon">
+                            <i class="fa-solid fa-envelope"></i>
+                        </div>
+                        <p>hafiz.triwahyu@gmail.com</p>
+                    </div>
+                    <div class="footer-contact-item">
+                        <div class="footer-contact-icon">
+                            <i class="fa-solid fa-phone"></i>
+                        </div>
+                        <p>+6285156081841</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Hafizh's Portfolio. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Font Awesome -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+
+    <!-- JavaScript files -->
+    <script src="js/portfolio-data.js"></script>
+    <script src="js/portfolio.js"></script>
+    <script src="js/contact.js"></script>
+    <script src="js/dark-mode.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

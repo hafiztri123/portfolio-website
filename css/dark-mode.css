@@ -1,0 +1,332 @@
+/* === DARK MODE STYLES === */
+:root {
+    /* Light mode colors (original) */
+    --primary-light: #00b8a9;
+    --secondary-light: #f8a488;
+    --dark-light: #1a2238;
+    --light-light: #f7f9fc;
+    --accent-light: #ff6e6c;
+    --text-light: #2d4159;
+    --card-bg-light: rgba(255, 255, 255, 0.95);
+    --gradient-light: linear-gradient(135deg, #00b8a9 0%, #0fccb5 100%);
+
+    /* Dark mode colors */
+    --primary-dark: #4ecdc4;
+    --secondary-dark: #ff9e7c;
+    --dark-dark: #0f1525;
+    --light-dark: #121a2c;
+    --accent-dark: #ff8c71;
+    --text-dark: #f0f5ff;
+    --text-muted-dark: #b8c7e0;
+    --heading-dark: #ffffff;
+    --link-dark: #7fdbff;
+    --card-bg-dark: rgba(22, 30, 46, 0.95);
+    --gradient-dark: linear-gradient(135deg, #00c7b7 0%, #00e6d2 100%);
+
+    /* Default to dark mode */
+    --primary: var(--primary-dark);
+    --secondary: var(--secondary-dark);
+    --dark: var(--dark-dark);
+    --light: var(--light-dark);
+    --accent: var(--accent-dark);
+    --text: var(--text-dark);
+    --gradient: var(--gradient-dark);
+    --card-bg: var(--card-bg-dark);
+    --transition: all 0.3s ease;
+}
+
+/* Light mode class */
+:root.light-mode {
+    --primary: var(--primary-light);
+    --secondary: var(--secondary-light);
+    --dark: var(--dark-light);
+    --light: var(--light-light);
+    --accent: var(--accent-light);
+    --text: var(--text-light);
+    --gradient: var(--gradient-light);
+    --card-bg: var(--card-bg-light);
+}
+
+/* Add improved text styles for better contrast and readability in dark mode */
+:root:not(.light-mode) h1,
+:root:not(.light-mode) h2,
+:root:not(.light-mode) h3,
+:root:not(.light-mode) h4,
+:root:not(.light-mode) h5,
+:root:not(.light-mode) h6 {
+    color: var(--heading-dark);
+}
+
+:root:not(.light-mode) .section-title {
+    color: var(--section-title-color);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+:root:not(.light-mode) p {
+    color: var(--paragraph-color);
+}
+
+:root:not(.light-mode) .hero-title {
+    color: var(--hero-title-color);
+    background: linear-gradient(to right, var(--heading-dark), var(--primary-dark));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    text-shadow: none;
+}
+
+:root:not(.light-mode) .hero-description {
+    color: var(--hero-description-color);
+}
+
+:root:not(.light-mode) .footer-title,
+:root:not(.light-mode) .modal-title,
+:root:not(.light-mode) .portfolio-title,
+:root:not(.light-mode) .service-title {
+    color: var(--heading-dark);
+}
+
+:root:not(.light-mode) .portfolio-description,
+:root:not(.light-mode) .service-description,
+:root:not(.light-mode) .about-text p,
+:root:not(.light-mode) .modal-text {
+    color: var(--text-muted-dark);
+}
+
+:root:not(.light-mode) .nav-links a:hover {
+    color: var(--link-dark);
+}
+
+:root:not(.light-mode) .skill {
+    color: var(--primary-dark);
+    font-weight: 600;
+}
+
+:root:not(.light-mode) .skill:hover {
+    color: #ffffff;
+}
+
+/* Add subtle glow to buttons in dark mode */
+:root:not(.light-mode) .btn {
+    box-shadow: 0 5px 15px rgba(78, 205, 196, 0.3);
+}
+
+:root:not(.light-mode) .btn:hover {
+    box-shadow: 0 8px 25px rgba(78, 205, 196, 0.5);
+}
+
+/* Improve contrast for portfolio and service cards */
+:root:not(.light-mode) .portfolio-item,
+:root:not(.light-mode) .service-card {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(78, 205, 196, 0.1);
+}
+
+:root:not(.light-mode) .portfolio-item:hover,
+:root:not(.light-mode) .service-card:hover {
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(78, 205, 196, 0.2);
+}
+
+/* Dark mode specific overrides */
+:root:not(.light-mode) {
+    /* General dark mode styles */
+    --header-bg: rgba(17, 25, 40, 0.98);
+    --header-scrolled-bg: rgba(15, 21, 37, 1);
+    --body-bg: #121a2c;
+    --about-bg: #16202f;
+    --portfolio-bg: #121a2c;
+    --services-bg: #16202f;
+    --contact-bg: #121a2c;
+    --footer-bg: #0f1525;
+    --form-bg: #16202f;
+    --input-bg: #1d283a;
+    --skill-bg: #1a2438;
+    --shadow-color: rgba(0, 0, 0, 0.3);
+    --border-color: rgba(255, 255, 255, 0.05);
+
+    /* Typography colors for dark mode */
+    --section-title-color: #ffffff;
+    --paragraph-color: var(--text-muted-dark);
+    --hero-title-color: #ffffff;
+    --hero-description-color: #d9e3ff;
+    --portfolio-title-color: #f0f5ff;
+    --service-title-color: #ffffff;
+}
+
+/* Dark mode body background */
+body:not(.light-mode) {
+    background-color: var(--body-bg);
+}
+
+/* Dark mode header */
+:root:not(.light-mode) header {
+    background-color: var(--header-bg);
+}
+
+:root:not(.light-mode) header.scrolled {
+    background-color: var(--header-scrolled-bg);
+}
+
+/* Dark mode hamburger */
+:root:not(.light-mode) .hamburger div {
+    background-color: var(--text);
+}
+
+/* Dark mode hero section */
+:root:not(.light-mode) .hero {
+    background: linear-gradient(to right, rgba(18, 26, 44, 0.9), rgba(18, 26, 44, 0.8)), url('/api/placeholder/1920/1080') center/cover;
+}
+
+/* Dark mode about section */
+:root:not(.light-mode) .about {
+    background-color: var(--about-bg);
+}
+
+/* Dark mode portfolio section */
+:root:not(.light-mode) .portfolio {
+    background-color: var(--portfolio-bg);
+}
+
+:root:not(.light-mode) .filter-btn {
+    background-color: var(--dark);
+    color: var(--text);
+}
+
+:root:not(.light-mode) .portfolio-item {
+    background-color: var(--card-bg);
+    border-color: var(--border-color);
+}
+
+/* Dark mode services section */
+:root:not(.light-mode) .services {
+    background-color: var(--services-bg);
+}
+
+:root:not(.light-mode) .service-card {
+    background-color: var(--dark);
+    border-color: var(--border-color);
+}
+
+:root:not(.light-mode) .service-icon {
+    background-color: var(--about-bg);
+    border-color: rgba(0, 217, 199, 0.1);
+}
+
+/* Dark mode contact section */
+:root:not(.light-mode) .contact {
+    background-color: var(--contact-bg);
+}
+
+:root:not(.light-mode) .contact-form {
+    background-color: var(--form-bg);
+    border-color: var(--border-color);
+}
+
+:root:not(.light-mode) .form-control {
+    background-color: var(--input-bg);
+    border-color: var(--border-color);
+    color: var(--text);
+}
+
+:root:not(.light-mode) .form-control:focus {
+    border-color: var(--primary);
+    background-color: var(--dark);
+}
+
+/* Dark mode skills */
+:root:not(.light-mode) .skill {
+    background-color: var(--skill-bg);
+}
+
+/* Dark mode modal */
+:root:not(.light-mode) .modal-content {
+    background-color: var(--form-bg);
+    color: var(--text);
+}
+
+:root:not(.light-mode) .modal-close {
+    color: var(--text);
+}
+
+:root:not(.light-mode) .modal-details {
+    background-color: var(--dark);
+}
+
+/* Dark mode footer */
+:root:not(.light-mode) footer {
+    background-color: var(--footer-bg);
+}
+
+:root:not(.light-mode) .footer-text {
+    color: var(--text-muted-dark);
+}
+
+:root:not(.light-mode) .footer-links a {
+    color: var(--text-muted-dark);
+}
+
+:root:not(.light-mode) .footer-links a:hover {
+    color: var(--primary-dark);
+}
+
+:root:not(.light-mode) .footer-contact-item p {
+    color: var(--text-muted-dark);
+}
+
+:root:not(.light-mode) .footer-bottom p {
+    color: var(--text-muted-dark);
+    opacity: 0.8;
+}
+
+/* Theme toggle button styles */
+.theme-toggle {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: var(--gradient);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 1000;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    border: none;
+    transition: var(--transition);
+}
+
+/* Enhanced theme toggle for dark mode */
+:root:not(.light-mode) .theme-toggle {
+    background: linear-gradient(135deg, #4ecdc4 0%, #2dbdb3 100%);
+    box-shadow: 0 5px 15px rgba(78, 205, 196, 0.3);
+}
+
+.theme-toggle:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.theme-toggle i {
+    font-size: 1.5rem;
+    transition: var(--transition);
+}
+
+/* Animation for theme toggle */
+.theme-toggle.animate i {
+    animation: spin 0.5s ease-in-out;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
