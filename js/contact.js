@@ -1,29 +1,61 @@
-// Contact form functionality
+// Contact form functionality using EmailJS
 const contactForm = document.getElementById('contactForm');
+const submitButton = document.querySelector('#contactForm button[type="submit"]');
 
-contactForm.addEventListener('submit', (e) => {
+// Initialize EmailJS
+// Replace YOUR_PUBLIC_KEY with your actual EmailJS public key after setting up your account
+(function () {
+    emailjs.init("GSQzy_TP6mJEIcv8X");
+})();
+
+contactForm.addEventListener('submit', function (e) {
     e.preventDefault();
 
-    // Get form data
+    // Show loading state
+    const originalButtonText = submitButton.innerHTML;
+    submitButton.disabled = true;
+    submitButton.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Sending...';
+
+    // Form validation
     const formData = new FormData(contactForm);
     const name = formData.get('name');
     const email = formData.get('email');
     const subject = formData.get('subject');
     const message = formData.get('message');
 
-    // Form validation
     if (!validateForm(name, email, subject, message)) {
+        // Reset button if validation fails
+        submitButton.disabled = false;
+        submitButton.innerHTML = originalButtonText;
         return;
     }
 
-    // In a real application, we would send the data to a server here
-    // This is just a placeholder for demo purposes
+    // Prepare template parameters
+    const templateParams = {
+        name: name,
+        email: email,
+        subject: subject,
+        message: message,
+        to_email: 'hafiz.triwahyu@gmail.com'
+    };
 
-    // Show success message
-    showSuccessMessage();
-
-    // Reset form
-    contactForm.reset();
+    // Send email using EmailJS
+    // Replace YOUR_SERVICE_ID and YOUR_TEMPLATE_ID with your actual EmailJS credentials
+    emailjs.send('service_n1v2jih', 'template_ywckyoa', templateParams)
+        .then(function (response) {
+            console.log('SUCCESS!', response.status, response.text);
+            showSuccessMessage();
+            contactForm.reset();
+            // Reset button
+            submitButton.disabled = false;
+            submitButton.innerHTML = originalButtonText;
+        }, function (error) {
+            console.log('FAILED...', error);
+            showErrorMessage();
+            // Reset button
+            submitButton.disabled = false;
+            submitButton.innerHTML = originalButtonText;
+        });
 });
 
 function validateForm(name, email, subject, message) {
@@ -73,12 +105,12 @@ function displayError(fieldName, errorMessage) {
     const errorElement = document.createElement('div');
     errorElement.className = 'error-message';
     errorElement.textContent = errorMessage;
-    errorElement.style.color = 'red';
+    errorElement.style.color = 'var(--accent)';
     errorElement.style.fontSize = '0.85rem';
     errorElement.style.marginTop = '0.5rem';
 
     field.parentNode.appendChild(errorElement);
-    field.style.borderColor = 'red';
+    field.style.borderColor = 'var(--accent)';
 }
 
 function clearErrors() {
@@ -110,5 +142,27 @@ function showSuccessMessage() {
     // Remove success message after 5 seconds
     setTimeout(() => {
         successMessage.remove();
+    }, 5000);
+}
+
+function showErrorMessage() {
+    // Create error message element
+    const errorMessage = document.createElement('div');
+    errorMessage.className = 'error-message-global';
+    errorMessage.textContent = 'There was an error sending your message. Please try again later.';
+    errorMessage.style.backgroundColor = 'rgba(255, 110, 108, 0.1)';
+    errorMessage.style.color = 'var(--accent)';
+    errorMessage.style.padding = '1rem';
+    errorMessage.style.borderRadius = '8px';
+    errorMessage.style.marginBottom = '1.5rem';
+    errorMessage.style.textAlign = 'center';
+    errorMessage.style.fontWeight = '600';
+
+    // Insert before the form
+    contactForm.parentNode.insertBefore(errorMessage, contactForm);
+
+    // Remove error message after 5 seconds
+    setTimeout(() => {
+        errorMessage.remove();
     }, 5000);
 }

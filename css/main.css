@@ -8,6 +8,8 @@
 @import 'services.css';
 @import 'contact.css';
 @import 'footer.css';
+/* Import gallery styles */
+@import 'portfolio-gallery.css';
 
 /* Import dark mode styles */
 @import 'dark-mode.css';

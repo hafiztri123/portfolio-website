@@ -130,39 +130,44 @@
     </section>
 
     <!-- Portfolio Modal -->
-    <div class="modal" id="portfolioModal">
-        <div class="modal-content">
-            <button class="modal-close">&times;</button>
-            <div class="modal-header">
-                <div class="modal-category" id="modalCategory"></div>
-                <h3 class="modal-title" id="modalTitle"></h3>
+<!-- Portfolio Modal -->
+<div class="modal" id="portfolioModal">
+    <div class="modal-content">
+        <button class="modal-close">&times;</button>
+        <div class="modal-header">
+            <div class="modal-category" id="modalCategory"></div>
+            <h3 class="modal-title" id="modalTitle"></h3>
+        </div>
+        <div class="modal-body">
+            <!-- Replace the single image with a gallery -->
+            <div class="modal-gallery" id="modalGallery">
+                <!-- Gallery content will be dynamically inserted here -->
             </div>
-            <div class="modal-body">
-                <div class="modal-image">
-                    <img id="modalImage" src="" alt="Project Image">
+
+            <div class="modal-text" id="modalDescription"></div>
+
+            <div class="modal-details">
+                <div class="modal-detail-item">
+                    <h5>Client</h5>
+                    <p id="modalClient"></p>
                 </div>
-                <div class="modal-text" id="modalDescription"></div>
-                <div class="modal-details">
-                    <div class="modal-detail-item">
-                        <h5>Client</h5>
-                        <p id="modalClient"></p>
-                    </div>
-                    <div class="modal-detail-item">
-                        <h5>Date</h5>
-                        <p id="modalDate"></p>
-                    </div>
-                    <div class="modal-detail-item">
-                        <h5>Technologies</h5>
-                        <p id="modalTechnologies"></p>
-                    </div>
+                <div class="modal-detail-item">
+                    <h5>Date</h5>
+                    <p id="modalDate"></p>
                 </div>
-                <div class="modal-footer">
-                    <a href="#" class="btn" id="modalLiveLink" target="_blank">View Live</a>
-                    <a href="#" class="btn btn-secondary" id="modalGithubLink" target="_blank">GitHub Repo</a>
+                <div class="modal-detail-item">
+                    <h5>Technologies</h5>
+                    <p id="modalTechnologies"></p>
                 </div>
+            </div>
+
+            <div class="modal-footer">
+                <a href="#" class="btn" id="modalLiveLink" target="_blank">View Live</a>
+                <a href="#" class="btn btn-secondary" id="modalGithubLink" target="_blank">GitHub Repo</a>
             </div>
         </div>
     </div>
+</div>
 
     <!-- Services Section -->
     <section id="services" class="services section">
@@ -350,12 +355,15 @@
     <!-- Font Awesome -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
 
-    <!-- JavaScript files -->
-    <script src="js/portfolio-data.js"></script>
-    <script src="js/portfolio.js"></script>
-    <script src="js/contact.js"></script>
-    <script src="js/dark-mode.js"></script>
-    <script src="js/main.js"></script>
+<!-- Add this script tag before your other JavaScript files -->
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+<!-- Existing JavaScript files -->
+<script src="js/portfolio-data.js"></script>
+<script src="js/portfolio.js"></script>
+<script src="js/contact.js"></script>
+<script src="js/dark-mode.js"></script>
+<script src="js/main.js"></script>
 </body>
 
 </html>
