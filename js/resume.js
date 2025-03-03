@@ -548,78 +548,78 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     // Enhance section titles with counter animations
-    function enhanceSectionTitles() {
-        const style = document.createElement('style');
-        style.textContent = `
-            .count-animation {
-                display: inline-block;
-                min-width: 30px;
-                opacity: 0;
-                transform: translateY(10px);
-                animation: countIn 0.5s forwards;
-            }
-            @keyframes countIn {
-                to {
-                    opacity: 1;
-                    transform: translateY(0);
-                }
-            }
-        `;
-        document.head.appendChild(style);
+    // function enhanceSectionTitles() {
+    //     const style = document.createElement('style');
+    //     style.textContent = `
+    //         .count-animation {
+    //             display: inline-block;
+    //             min-width: 30px;
+    //             opacity: 0;
+    //             transform: translateY(10px);
+    //             animation: countIn 0.5s forwards;
+    //         }
+    //         @keyframes countIn {
+    //             to {
+    //                 opacity: 1;
+    //                 transform: translateY(0);
+    //             }
+    //         }
+    //     `;
+    //     document.head.appendChild(style);
 
-        // Count up animation
-        function animateCounter(element, targetCount) {
-            let count = 0;
-            const duration = 1500; // ms
-            const frameDuration = 1000 / 60; // 60fps
-            const totalFrames = Math.round(duration / frameDuration);
-            const countIncrement = targetCount / totalFrames;
+    //     // Count up animation
+    //     function animateCounter(element, targetCount) {
+    //         let count = 0;
+    //         const duration = 1500; // ms
+    //         const frameDuration = 1000 / 60; // 60fps
+    //         const totalFrames = Math.round(duration / frameDuration);
+    //         const countIncrement = targetCount / totalFrames;
 
-            element.textContent = '0';
-            element.classList.add('count-animation');
+    //         element.textContent = '0';
+    //         element.classList.add('count-animation');
 
-            const counter = setInterval(() => {
-                count += countIncrement;
-                const progress = Math.min(Math.round(count), targetCount);
-                element.textContent = progress;
+    //         const counter = setInterval(() => {
+    //             count += countIncrement;
+    //             const progress = Math.min(Math.round(count), targetCount);
+    //             element.textContent = progress;
 
-                if (progress === targetCount) {
-                    clearInterval(counter);
-                }
-            }, frameDuration);
-        }
+    //             if (progress === targetCount) {
+    //                 clearInterval(counter);
+    //             }
+    //         }, frameDuration);
+    //     }
 
-        // Add dynamic counters to section titles
-        window.addEventListener('scroll', () => {
-            const educationSection = document.getElementById('education-content');
-            if (educationSection && educationSection.classList.contains('active') && !educationSection.hasAttribute('data-counted')) {
-                const rect = educationSection.getBoundingClientRect();
-                if (rect.top < window.innerHeight && rect.bottom > 0) {
-                    const countElement = document.createElement('span');
-                    countElement.className = 'education-counter';
-                    countElement.style.cssText = 'position: absolute; top: 10px; right: 10px; background: var(--gradient); color: white; padding: 5px 15px; border-radius: 20px; font-size: 14px; box-shadow: 0 5px 15px rgba(0, 184, 169, 0.2);';
-                    educationSection.querySelector('.section-title').appendChild(countElement);
+    //     // Add dynamic counters to section titles
+    //     window.addEventListener('scroll', () => {
+    //         const educationSection = document.getElementById('education-content');
+    //         if (educationSection && educationSection.classList.contains('active') && !educationSection.hasAttribute('data-counted')) {
+    //             const rect = educationSection.getBoundingClientRect();
+    //             if (rect.top < window.innerHeight && rect.bottom > 0) {
+    //                 const countElement = document.createElement('span');
+    //                 countElement.className = 'education-counter';
+    //                 countElement.style.cssText = 'position: absolute; top: 10px; right: 10px; background: var(--gradient); color: white; padding: 5px 15px; border-radius: 20px; font-size: 14px; box-shadow: 0 5px 15px rgba(0, 184, 169, 0.2);';
+    //                 educationSection.querySelector('.section-title').appendChild(countElement);
 
-                    animateCounter(countElement, educationData.length);
-                    educationSection.setAttribute('data-counted', 'true');
-                }
-            }
+    //                 animateCounter(countElement, educationData.length);
+    //                 educationSection.setAttribute('data-counted', 'true');
+    //             }
+    //         }
 
-            const certificatesSection = document.getElementById('certificates-content');
-            if (certificatesSection && certificatesSection.classList.contains('active') && !certificatesSection.hasAttribute('data-counted')) {
-                const rect = certificatesSection.getBoundingClientRect();
-                if (rect.top < window.innerHeight && rect.bottom > 0) {
-                    const countElement = document.createElement('span');
-                    countElement.className = 'certificates-counter';
-                    countElement.style.cssText = 'position: absolute; top: 10px; right: 10px; background: var(--gradient); color: white; padding: 5px 15px; border-radius: 20px; font-size: 14px; box-shadow: 0 5px 15px rgba(0, 184, 169, 0.2);';
-                    certificatesSection.querySelector('.section-title').appendChild(countElement);
+    //         const certificatesSection = document.getElementById('certificates-content');
+    //         if (certificatesSection && certificatesSection.classList.contains('active') && !certificatesSection.hasAttribute('data-counted')) {
+    //             const rect = certificatesSection.getBoundingClientRect();
+    //             if (rect.top < window.innerHeight && rect.bottom > 0) {
+    //                 const countElement = document.createElement('span');
+    //                 countElement.className = 'certificates-counter';
+    //                 countElement.style.cssText = 'position: absolute; top: 10px; right: 10px; background: var(--gradient); color: white; padding: 5px 15px; border-radius: 20px; font-size: 14px; box-shadow: 0 5px 15px rgba(0, 184, 169, 0.2);';
+    //                 certificatesSection.querySelector('.section-title').appendChild(countElement);
 
-                    animateCounter(countElement, certificateData.length);
-                    certificatesSection.setAttribute('data-counted', 'true');
-                }
-            }
-        });
-    }
+    //                 animateCounter(countElement, certificateData.length);
+    //                 certificatesSection.setAttribute('data-counted', 'true');
+    //             }
+    //         }
+    //     });
+    // }
 
     // Add scroll indicator to the timeline
     function addTimelineScrollIndicator() {

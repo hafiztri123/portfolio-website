@@ -5,7 +5,10 @@
 
 /* Import enhanced typography and colors */
 @import 'resume-typography.css';
+
 @import 'resume-colors.css';
+@import 'dark-mode-enhancements.css';
+@import 'resume-enchancement.css';
 
 /* Font import for enhanced typography */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');

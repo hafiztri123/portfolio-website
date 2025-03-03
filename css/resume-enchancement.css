@@ -1,0 +1,154 @@
+/* Enhanced Contact Info and Section Titles */
+
+/* 1. CV Contact Info Dark Mode Enhancement */
+:root:not(.light-mode) .cv-contact-info div {
+    background-color: rgba(78, 205, 196, 0.2);
+    /* More visible background */
+    color: #ffffff;
+    /* White text for better contrast */
+    font-weight: 500;
+    border-left: 3px solid #4ecdc4;
+    /* Accent border for visual interest */
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    /* Subtle shadow for depth */
+    padding: 0.6rem 1rem;
+    border-radius: 8px;
+    /* Slightly less rounded for a more professional look */
+    transition: all 0.3s ease;
+}
+
+:root:not(.light-mode) .cv-contact-info div:hover {
+    background-color: rgba(78, 205, 196, 0.3);
+    /* Brighter on hover */
+    transform: translateY(-3px);
+    /* Subtle lift effect */
+    box-shadow: 0 5px 15px rgba(78, 205, 196, 0.3);
+    /* Glowing shadow on hover */
+}
+
+:root:not(.light-mode) .cv-contact-info div i {
+    color: #4ecdc4;
+    /* Bright teal icon */
+    font-size: 1.2rem;
+    /* Slightly larger icon */
+    text-shadow: 0 0 10px rgba(78, 205, 196, 0.5);
+    /* Subtle glow for icon */
+}
+
+/* 2. Enhanced Resume Section Titles */
+.section-title {
+    position: relative;
+    padding-bottom: 1.2rem;
+    margin-bottom: 3.5rem;
+    text-align: center;
+    font-size: 2.8rem;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+}
+
+/* Creative background effect */
+.section-title::before {
+    content: attr(data-text);
+    position: absolute;
+    top: -1.2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 5rem;
+    opacity: 0.04;
+    font-weight: 900;
+    letter-spacing: 1px;
+    white-space: nowrap;
+    z-index: -1;
+}
+
+/* Modern underline treatment */
+.section-title::after {
+    content: '';
+    position: absolute;
+    width: 80px;
+    height: 4px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background: linear-gradient(90deg, #00A896 0%, #02C39A 100%);
+    border-radius: 4px;
+}
+
+/* Add subtle shine effect to section title */
+@keyframes shine {
+    from {
+        background-position: -100% 0;
+    }
+
+    to {
+        background-position: 200% 0;
+    }
+}
+
+/* Enhanced section title in light mode */
+.section-title {
+    background: linear-gradient(90deg, #1A2238, #00A896, #1A2238);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-fill-color: transparent;
+    animation: shine 8s linear infinite;
+}
+
+/* Enhanced section title in dark mode */
+:root:not(.light-mode) .section-title {
+    background: linear-gradient(90deg, #ffffff, #4ecdc4, #ffffff);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-fill-color: transparent;
+    animation: shine 8s linear infinite;
+}
+
+/* Add subtle embellishments to section titles */
+.section-title::before {
+    content: "⎯⎯⎯";
+    position: absolute;
+    bottom: -1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1.5rem;
+    letter-spacing: 10px;
+    color: #00A896;
+    opacity: 0.3;
+    text-shadow: none;
+    -webkit-text-fill-color: #00A896;
+    text-fill-color: #00A896;
+}
+
+:root:not(.light-mode) .section-title::before {
+    color: #4ecdc4;
+    -webkit-text-fill-color: #4ecdc4;
+    text-fill-color: #4ecdc4;
+}
+
+/* Additional elements for section title decoration */
+.section-title-wrapper {
+    position: relative;
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.section-title-wrapper::before,
+.section-title-wrapper::after {
+    content: '';
+    position: absolute;
+    height: 1px;
+    width: 100px;
+    background: linear-gradient(90deg, transparent, #00A896, transparent);
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+:root:not(.light-mode) .section-title-wrapper::before,
+:root:not(.light-mode) .section-title-wrapper::after {
+    background: linear-gradient(90deg, transparent, #4ecdc4, transparent);
+}

@@ -1,0 +1,63 @@
+/* Enhanced Dark Mode CV Item Title Styling */
+
+/* Make CV item titles more visually appealing in dark mode */
+:root:not(.light-mode) .cv-item-title {
+    color: #4ecdc4;
+    /* Bright teal for better visibility */
+    font-weight: 700;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    position: relative;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+/* Add a subtle gradient underline effect */
+:root:not(.light-mode) .cv-item-title::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(90deg, #4ecdc4, #7fdbff);
+    transition: width 0.3s ease;
+}
+
+/* Expand the underline on hover */
+:root:not(.light-mode) .cv-item:hover .cv-item-title::after {
+    width: 100%;
+}
+
+/* Enhance organization title styling in dark mode */
+:root:not(.light-mode) .organization-title {
+    color: #4ecdc4;
+    /* Match the CV item title color */
+    letter-spacing: 0px;
+}
+
+/* Certificate title enhancement in dark mode */
+:root:not(.light-mode) .certificate-title {
+    color: #4ecdc4;
+    /* Match the CV item title color */
+    background: linear-gradient(90deg, #4ecdc4, #7fdbff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-fill-color: transparent;
+}
+
+/* Improve section titles in dark mode */
+:root:not(.light-mode) .cv-section h3 {
+    color: white;
+    background: linear-gradient(90deg, white, #4ecdc4);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-fill-color: transparent;
+    font-weight: 800;
+}
+
+/* Add a subtle glow to enhance visibility */
+:root:not(.light-mode) .cv-item:hover .cv-item-title {
+    text-shadow: 0 0 10px rgba(78, 205, 196, 0.3);
+}
