@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hafizh | Resume & Qualifications</title>
+    <!-- Main CSS file that imports all other CSS files -->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/resume-import.css">
+    <!-- Resume specific CSS -->
+    <!-- <link rel="stylesheet" href="css/resume.css"> -->
+    <!-- AOS Animation Library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+    <!-- Google Fonts for enhanced typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Header -->
+    <header id="header">
+        <div class="container">
+            <nav>
+                <div class="logo">Hafizh's <span>Portfolio</span></div>
+                <ul class="nav-links">
+                    <li><a href="index.html#home">Home</a></li>
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="index.html#portfolio">Portfolio</a></li>
+                    <li><a href="index.html#services">Services</a></li>
+                    <li><a href="resume.html" class="active">Resume</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+                <div class="hamburger">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Resume Hero Section -->
+    <section class="resume-hero">
+        <div class="shapes">
+            <div class="shape circle"></div>
+            <div class="shape triangle"></div>
+            <div class="shape square"></div>
+            <div class="shape circle"></div>
+        </div>
+        <div class="container">
+            <div class="resume-hero-content" data-aos="fade-up">
+                <div class="resume-subtitle">My Qualifications</div>
+                <h1 class="resume-title">Resume & Experience</h1>
+                <p class="resume-description">View my professional journey, qualifications, and achievements throughout my career path in technology and design.</p>
+                <div class="resume-tabs">
+                    <button class="tab-btn active" data-tab="education">Education</button>
+                    <button class="tab-btn" data-tab="cv">CV</button>
+                    <button class="tab-btn" data-tab="organizations">Organizations</button>
+                    <button class="tab-btn" data-tab="certificates">Certificates</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resume Content Section -->
+    <section class="resume-content section">
+        <div class="container">
+            <!-- Education Timeline Tab Content -->
+            <div class="tab-content active" id="education-content">
+                <h2 class="section-title">Education Timeline</h2>
+                <div class="timeline">
+                    <!-- Timeline items will be loaded from JSON -->
+                </div>
+            </div>
+
+            <!-- CV Tab Content -->
+            <div class="tab-content" id="cv-content">
+                <h2 class="section-title">Curriculum Vitae</h2>
+                <div class="cv-container" data-aos="fade-up">
+                    <div class="cv-header">
+                        <div class="cv-photo">
+                            <img src="./Pas Foto.jpg" alt="Profile Photo">
+                        </div>
+                        <div class="cv-intro">
+                            <h1>Hafizh Tri Wahyudi</h1>
+                            <h2>Fullstack Developer</h2>
+                            <p>A passionate developer with experience in creating modern and responsive web applications, combining technical expertise with strong problem-solving skills.</p>
+                            <div class="cv-contact-info">
+                                <div><i class="fa-solid fa-envelope"></i> hafiz.triwahyu@gmail.com</div>
+                                <div><i class="fa-solid fa-phone"></i> +6285156081841</div>
+                                <div><i class="fa-solid fa-location-dot"></i> Jakarta, Indonesia</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="cv-section">
+                        <h3><i class="fa-solid fa-user"></i> Professional Summary</h3>
+                        <p>Fullstack developer with expertise in JavaScript, React, and backend technologies. 
+                           Strong background in psychology with excellent analytical and problem-solving skills.
+                           Seeking opportunities to contribute to innovative projects while continuing to grow my technical expertise.</p>
+                    </div>
+
+                    <div class="cv-section">
+                        <h3><i class="fa-solid fa-graduation-cap"></i> Education</h3>
+                        <div class="cv-item">
+                            <div class="cv-item-title">Bachelor of Psychology</div>
+                            <div class="cv-item-subtitle">University of Indonesia</div>
+                            <div class="cv-item-date">2016 - 2020</div>
+                            <div class="cv-item-description">
+                                Graduated with honors. Focused on cognitive psychology and human-computer interaction.
+                            </div>
+                        </div>
+                        <!-- Additional education items will be loaded from JSON -->
+                    </div>
+
+                    <div class="cv-section">
+                        <h3><i class="fa-solid fa-briefcase"></i> Work Experience</h3>
+                        <!-- Work experience items will be loaded from JSON -->
+                    </div>
+
+                    <div class="cv-section">
+                        <h3><i class="fa-solid fa-code"></i> Technical Skills</h3>
+                        <div class="cv-skills">
+                            <div class="cv-skill-category">
+                                <h4>Frontend</h4>
+                                <div class="skill-tags">
+                                    <span>JavaScript</span>
+                                    <span>React</span>
+                                    <span>HTML5</span>
+                                    <span>CSS3</span>
+                                    <span>Tailwind CSS</span>
+                                </div>
+                            </div>
+                            <div class="cv-skill-category">
+                                <h4>Backend</h4>
+                                <div class="skill-tags">
+                                    <span>Golang</span>
+                                    <span>PHP</span>
+                                    <span>Java</span>
+                                    <span>Python</span>
+                                    <span>Node.js</span>
+                                </div>
+                            </div>
+                            <div class="cv-skill-category">
+                                <h4>Database</h4>
+                                <div class="skill-tags">
+                                    <span>PostgreSQL</span>
+                                    <span>MySQL</span>
+                                    <span>MongoDB</span>
+                                    <span>Redis</span>
+                                </div>
+                            </div>
+                            <div class="cv-skill-category">
+                                <h4>DevOps & Tools</h4>
+                                <div class="skill-tags">
+                                    <span>Docker</span>
+                                    <span>Elasticsearch</span>
+                                    <span>Logstash</span>
+                                    <span>Kibana</span>
+                                    <span>Git</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="cv-actions">
+                        <a href="#" class="btn cv-download-btn" id="downloadCV">
+                            <i class="fa-solid fa-download"></i> Download CV
+                        </a>
+                        <a href="index.html#contact" class="btn btn-secondary">
+                            <i class="fa-solid fa-envelope"></i> Contact Me
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Organizations Tab Content -->
+            <div class="tab-content" id="organizations-content">
+                <h2 class="section-title">Organizations & Responsibilities</h2>
+                <div class="organizations-grid">
+                    <!-- Organization cards will be loaded from JSON -->
+                </div>
+            </div>
+
+            <!-- Certificates Tab Content -->
+            <div class="tab-content" id="certificates-content">
+                <h2 class="section-title">Certificates & Achievements</h2>
+                <div class="certificate-filter">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="technical">Technical</button>
+                    <button class="filter-btn" data-filter="soft-skills">Soft Skills</button>
+                    <button class="filter-btn" data-filter="academic">Academic</button>
+                </div>
+                <div class="certificates-grid">
+                    <!-- Certificate cards will be loaded from JSON -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <div class="footer-logo">Hafizh's <span>Portfolio</span></div>
+                    <p class="footer-text">A passionate fullstack developer focused on creating clean, user-friendly
+                        experiences for my clients.</p>
+                    <div class="footer-social">
+                        <a href="https://github.com/hafiztri123" class="footer-social-icon">
+                            <i class="fa-brands fa-github"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/hafizh-tri1/" class="footer-social-icon">
+                            <i class="fa-brands fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://x.com/HafizhDev" class="footer-social-icon">
+                            <i class="fa-brands fa-twitter"></i>
+                        </a>
+                        <a href="https://www.instagram.com/hafiztriw/" class="footer-social-icon">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-links-container">
+                    <h4 class="footer-title">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html#home">Home</a></li>
+                        <li><a href="index.html#about">About</a></li>
+                        <li><a href="index.html#portfolio">Portfolio</a></li>
+                        <li><a href="index.html#services">Services</a></li>
+                        <li><a href="resume.html">Resume</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4 class="footer-title">Contact Info</h4>
+                    <div class="footer-contact-item">
+                        <div class="footer-contact-icon">
+                            <i class="fa-solid fa-location-dot"></i>
+                        </div>
+                        <p>Jakarta, Indonesia</p>
+                    </div>
+                    <div class="footer-contact-item">
+                        <div class="footer-contact-icon">
+                            <i class="fa-solid fa-envelope"></i>
+                        </div>
+                        <p>hafiz.triwahyu@gmail.com</p>
+                    </div>
+                    <div class="footer-contact-item">
+                        <div class="footer-contact-icon">
+                            <i class="fa-solid fa-phone"></i>
+                        </div>
+                        <p>+6285156081841</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Hafizh's Portfolio. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Font Awesome -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+    
+    <!-- AOS Animation Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    
+    <!-- VanillaTilt.js for 3D hover effects -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.2/vanilla-tilt.min.js"></script>
+    
+    <!-- HTML2PDF for CV download -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+
+    <!-- JavaScript files -->
+    <script src="js/data/education-data.js"></script>
+    <script src="js/data/experience-data.js"></script>
+    <script src="js/data/organization-data.js"></script>
+    <script src="js/data/certificate-data.js"></script>
+    <script src="js/dark-mode.js"></script>
+    <script src="js/resume.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

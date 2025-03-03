@@ -1,0 +1,164 @@
+/* ==== RESUME STYLES IMPORT FILE ==== */
+
+/* Import base styles and main components */
+@import 'resume.css';
+
+/* Import enhanced typography and colors */
+@import 'resume-typography.css';
+@import 'resume-colors.css';
+
+/* Font import for enhanced typography */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+/* Add additional custom styles */
+:root {
+    /* Base font styles */
+    --resume-font-family: 'Inter', 'Segoe UI', system-ui, sans-serif;
+    --resume-font-size-small: 0.9rem;
+    --resume-font-size-base: 1rem;
+    --resume-font-size-large: 1.1rem;
+    --resume-font-size-xl: 1.25rem;
+    --resume-font-size-2xl: 1.5rem;
+    --resume-font-size-3xl: 1.875rem;
+    --resume-font-size-4xl: 2.25rem;
+    --resume-line-height-tight: 1.25;
+    --resume-line-height-normal: 1.5;
+    --resume-line-height-relaxed: 1.75;
+
+    /* Spacing */
+    --resume-space-xs: 0.25rem;
+    --resume-space-sm: 0.5rem;
+    --resume-space-md: 1rem;
+    --resume-space-lg: 1.5rem;
+    --resume-space-xl: 2rem;
+    --resume-space-2xl: 2.5rem;
+
+    /* Transitions */
+    --resume-transition-fast: 150ms ease;
+    --resume-transition-normal: 300ms ease;
+    --resume-transition-slow: 500ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* Apply font family to resume components */
+.resume-hero,
+.resume-content,
+.cv-container,
+.timeline-item,
+.organization-card,
+.certificate-card {
+    font-family: var(--resume-font-family);
+}
+
+/* Typography scale adjustments */
+.resume-title {
+    font-size: var(--resume-font-size-4xl);
+    line-height: var(--resume-line-height-tight);
+    font-weight: 800;
+}
+
+.section-title {
+    font-size: var(--resume-font-size-3xl);
+    line-height: var(--resume-line-height-tight);
+    font-weight: 700;
+    margin-bottom: var(--resume-space-2xl);
+}
+
+.timeline-title,
+.cv-item-title,
+.organization-title,
+.certificate-title {
+    font-size: var(--resume-font-size-2xl);
+    line-height: var(--resume-line-height-tight);
+    font-weight: 700;
+}
+
+.timeline-subtitle,
+.cv-item-subtitle,
+.organization-role,
+.certificate-issuer {
+    font-size: var(--resume-font-size-large);
+    line-height: var(--resume-line-height-normal);
+    font-weight: 600;
+}
+
+.timeline-description,
+.cv-item-description,
+.organization-description,
+.certificate-description,
+.responsibility-item {
+    font-size: var(--resume-font-size-base);
+    line-height: var(--resume-line-height-relaxed);
+    font-weight: 400;
+}
+
+/* Add print styles for CV section */
+@media print {
+    body {
+        background-color: white !important;
+    }
+
+    .cv-container {
+        box-shadow: none !important;
+        border: none !important;
+        padding: 0 !important;
+        max-width: 100% !important;
+    }
+
+    header,
+    footer,
+    .resume-hero,
+    .resume-tabs,
+    .cv-actions {
+        display: none !important;
+    }
+
+    .cv-section {
+        page-break-inside: avoid;
+    }
+
+    /* Adjust colors for better printing */
+    .cv-item-title,
+    .cv-section h3,
+    .cv-intro h1,
+    .cv-skill-category h4 {
+        color: #000000 !important;
+        -webkit-text-fill-color: #000000 !important;
+    }
+
+    .cv-item-subtitle,
+    .cv-intro h2,
+    .cv-contact-info div i {
+        color: #00A896 !important;
+    }
+
+    .skill-tags span {
+        border: 1px solid #00A896 !important;
+        background-color: transparent !important;
+    }
+}
+
+/* Add accessibility improvements */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* High contrast mode adjustments */
+@media (forced-colors: active) {
+
+    .timeline::before,
+    .cv-item::before,
+    .timeline-item::after,
+    .responsibility-item::before {
+        forced-color-adjust: none;
+    }
+
+    .tab-btn.active,
+    .filter-btn.active {
+        border: 2px solid CanvasText;
+    }
+}

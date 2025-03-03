@@ -1,0 +1,490 @@
+/* === PROFESSIONAL COLOR SCHEME FOR RESUME === */
+
+/* Custom color variables */
+:root {
+    /* Primary color palette - Professional Teal and Navy */
+    --resume-primary: #00A896;
+    /* Teal */
+    --resume-primary-light: #02C39A;
+    /* Bright Teal */
+    --resume-primary-dark: #028090;
+    /* Dark Teal */
+    --resume-secondary: #1A2238;
+    /* Navy */
+    --resume-secondary-light: #283857;
+    /* Lighter Navy */
+    --resume-accent: #F8A488;
+    /* Soft Coral (for accents) */
+
+    /* Neutral colors */
+    --resume-text-dark: #1A2238;
+    /* Dark navy for headings */
+    --resume-text-main: #4A5568;
+    /* Slate gray for main text */
+    --resume-text-light: #718096;
+    /* Medium gray for secondary text */
+    --resume-bg-light: #F7FAFC;
+    /* Light gray for backgrounds */
+    --resume-bg-off-white: #EDF2F7;
+    /* Off-white for card backgrounds */
+
+    /* Gradients */
+    --resume-gradient-primary: linear-gradient(135deg, #00A896 0%, #02C39A 100%);
+    --resume-gradient-title: linear-gradient(135deg, #1A2238 0%, #00A896 100%);
+    --resume-gradient-accent: linear-gradient(135deg, #F8A488 0%, #F3C7BC 100%);
+
+    /* Card and element styling */
+    --resume-shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.05);
+    --resume-shadow-md: 0 4px 6px rgba(0, 0, 0, 0.07), 0 12px 16px rgba(0, 0, 0, 0.03);
+    --resume-shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.1);
+    --resume-shadow-primary: 0 10px 20px rgba(0, 168, 150, 0.15);
+
+    /* Dark mode overrides */
+    --resume-dark-bg: #111827;
+    --resume-dark-card: #1F2937;
+    --resume-dark-surface: #374151;
+    --resume-dark-text: #F9FAFB;
+    --resume-dark-text-secondary: #E5E7EB;
+    --resume-dark-border: rgba(255, 255, 255, 0.1);
+    --resume-dark-primary: #02C39A;
+}
+
+/* Apply the color scheme to specific elements */
+
+/* Hero section */
+.resume-hero {
+    background: linear-gradient(to right, var(--resume-bg-light), var(--resume-bg-off-white));
+}
+
+.resume-subtitle {
+    color: var(--resume-primary);
+    background-color: rgba(0, 168, 150, 0.08);
+    box-shadow: var(--resume-shadow-sm);
+}
+
+.resume-title {
+    background: var(--resume-gradient-title);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+}
+
+.resume-description {
+    color: var(--resume-text-main);
+}
+
+/* Tab buttons and filters */
+.tab-btn,
+.filter-btn {
+    color: var(--resume-text-main);
+    background-color: white;
+    box-shadow: var(--resume-shadow-sm);
+}
+
+.tab-btn.active,
+.tab-btn:hover,
+.filter-btn.active,
+.filter-btn:hover {
+    color: white;
+    background: var(--resume-gradient-primary);
+    box-shadow: var(--resume-shadow-primary);
+}
+
+/* Section titles */
+.section-title {
+    color: var(--resume-text-dark);
+}
+
+.section-title::before {
+    color: rgba(0, 168, 150, 0.05);
+}
+
+.section-title::after {
+    background: var(--resume-gradient-primary);
+}
+
+/* Timeline elements */
+.timeline::before {
+    background: var(--resume-gradient-primary);
+    box-shadow: var(--resume-shadow-sm);
+}
+
+.timeline-item::after {
+    background: var(--resume-primary);
+    box-shadow: 0 0 0 4px rgba(0, 168, 150, 0.2), var(--resume-shadow-sm);
+}
+
+.timeline-item:hover::after {
+    background: var(--resume-primary-light);
+    box-shadow: 0 0 0 4px rgba(0, 168, 150, 0.3), var(--resume-shadow-md);
+}
+
+.timeline-content {
+    background-color: white;
+    box-shadow: var(--resume-shadow-md);
+    border: 1px solid rgba(0, 168, 150, 0.05);
+}
+
+.timeline-item:hover .timeline-content {
+    border-color: rgba(0, 168, 150, 0.15);
+    box-shadow: var(--resume-shadow-lg);
+}
+
+.timeline-date {
+    background: var(--resume-gradient-primary);
+    color: white;
+    box-shadow: var(--resume-shadow-primary);
+}
+
+.timeline-title {
+    color: var(--resume-text-dark);
+}
+
+.timeline-title::after {
+    background: var(--resume-gradient-primary);
+}
+
+.timeline-subtitle {
+    color: var(--resume-primary);
+}
+
+.timeline-description {
+    color: var(--resume-text-main);
+}
+
+/* CV container */
+.cv-container {
+    background: white;
+    box-shadow: var(--resume-shadow-lg);
+    border: 1px solid rgba(0, 168, 150, 0.05);
+}
+
+.cv-container::before {
+    background: var(--resume-gradient-primary);
+}
+
+.cv-photo::before {
+    background: var(--resume-gradient-primary);
+}
+
+.cv-intro h1 {
+    background: var(--resume-gradient-title);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+}
+
+.cv-intro h2 {
+    color: var(--resume-primary);
+}
+
+.cv-intro p {
+    color: var(--resume-text-main);
+}
+
+.cv-contact-info div {
+    color: var(--resume-text-main);
+    background-color: rgba(0, 168, 150, 0.08);
+}
+
+.cv-contact-info div:hover {
+    background-color: rgba(0, 168, 150, 0.12);
+}
+
+.cv-contact-info div i {
+    color: var(--resume-primary);
+}
+
+.cv-section h3 {
+    color: var(--resume-text-dark);
+}
+
+.cv-section h3::after {
+    background: var(--resume-gradient-primary);
+}
+
+.cv-section h3 i {
+    color: var(--resume-primary);
+}
+
+.cv-item {
+    border-left: 3px solid rgba(0, 168, 150, 0.2);
+}
+
+.cv-item:hover {
+    border-left-color: var(--resume-primary);
+}
+
+.cv-item::before {
+    background: var(--resume-primary);
+    box-shadow: 0 0 0 4px rgba(0, 168, 150, 0.1);
+}
+
+.cv-item:hover::before {
+    background: var(--resume-primary-light);
+    box-shadow: 0 0 0 4px rgba(0, 168, 150, 0.2);
+}
+
+.cv-item-title {
+    color: var(--resume-text-dark);
+}
+
+.cv-item-subtitle {
+    color: var(--resume-primary);
+}
+
+.cv-item-date {
+    color: var(--resume-text-light);
+    background-color: rgba(113, 128, 150, 0.1);
+}
+
+.cv-item-description {
+    color: var(--resume-text-main);
+}
+
+.cv-skill-category h4 {
+    color: var(--resume-text-dark);
+    border-bottom: 2px solid rgba(0, 168, 150, 0.1);
+}
+
+.cv-skill-category h4::after {
+    background: var(--resume-gradient-primary);
+}
+
+.skill-tags span {
+    color: var(--resume-primary);
+    background-color: rgba(0, 168, 150, 0.08);
+    box-shadow: var(--resume-shadow-sm);
+}
+
+.skill-tags span:hover {
+    color: white;
+    background: var(--resume-gradient-primary);
+    box-shadow: var(--resume-shadow-primary);
+}
+
+/* Organization cards */
+.organization-card {
+    background-color: white;
+    box-shadow: var(--resume-shadow-md);
+    border: 1px solid rgba(0, 168, 150, 0.05);
+}
+
+.organization-card:hover {
+    box-shadow: var(--resume-shadow-lg);
+    border-color: rgba(0, 168, 150, 0.15);
+}
+
+.organization-card::before {
+    background: var(--resume-gradient-primary);
+}
+
+.organization-title {
+    color: var(--resume-text-dark);
+}
+
+.organization-title::after {
+    background: var(--resume-gradient-primary);
+}
+
+.organization-role {
+    color: var(--resume-primary);
+    background-color: rgba(0, 168, 150, 0.08);
+}
+
+.organization-date {
+    color: var(--resume-text-light);
+}
+
+.organization-date i {
+    color: var(--resume-primary);
+}
+
+.organization-description {
+    color: var(--resume-text-main);
+}
+
+.organization-responsibilities {
+    background-color: rgba(0, 168, 150, 0.05);
+}
+
+.organization-responsibilities h4 {
+    color: var(--resume-text-dark);
+}
+
+.organization-responsibilities h4 i {
+    color: var(--resume-primary);
+}
+
+.responsibility-item {
+    color: var(--resume-text-main);
+}
+
+.responsibility-item::before {
+    background-color: var(--resume-primary);
+    box-shadow: 0 0 0 2px rgba(0, 168, 150, 0.1);
+}
+
+.responsibility-item:hover::before {
+    background-color: var(--resume-primary-light);
+}
+
+/* Certificate cards */
+.certificate-card {
+    background-color: white;
+    box-shadow: var(--resume-shadow-md);
+    border: 1px solid rgba(0, 168, 150, 0.05);
+}
+
+.certificate-card:hover {
+    box-shadow: var(--resume-shadow-lg);
+    border-color: rgba(0, 168, 150, 0.15);
+}
+
+.certificate-card::before {
+    background: var(--resume-gradient-primary);
+}
+
+.certificate-badge {
+    background: var(--resume-gradient-primary);
+    color: white;
+    box-shadow: var(--resume-shadow-primary);
+}
+
+.certificate-issuer {
+    color: var(--resume-primary);
+    background-color: rgba(0, 168, 150, 0.08);
+}
+
+.certificate-title {
+    color: var(--resume-text-dark);
+}
+
+.certificate-title::after {
+    background: var(--resume-gradient-primary);
+}
+
+.certificate-date {
+    color: var(--resume-text-light);
+}
+
+.certificate-date i {
+    color: var(--resume-primary);
+}
+
+.certificate-description {
+    color: var(--resume-text-main);
+}
+
+.certificate-link {
+    color: var(--resume-primary);
+    background-color: rgba(0, 168, 150, 0.08);
+    box-shadow: var(--resume-shadow-sm);
+}
+
+.certificate-link:hover {
+    color: white;
+    background: var(--resume-gradient-primary);
+    box-shadow: var(--resume-shadow-primary);
+}
+
+/* Action buttons */
+.cv-download-btn {
+    background: var(--resume-gradient-primary);
+    color: white;
+    box-shadow: var(--resume-shadow-primary);
+}
+
+.cv-download-btn:hover {
+    box-shadow: 0 15px 30px rgba(0, 168, 150, 0.3);
+}
+
+/* Notification styles */
+.notification.success {
+    border-left: 4px solid var(--resume-primary);
+}
+
+.notification.success .notification-icon {
+    color: var(--resume-primary);
+}
+
+/* Dark mode overrides */
+:root:not(.light-mode) {
+    --resume-primary: var(--resume-dark-primary);
+}
+
+:root:not(.light-mode) .resume-hero {
+    background: linear-gradient(to right, rgba(17, 24, 39, 0.9), rgba(31, 41, 55, 0.8));
+}
+
+:root:not(.light-mode) .resume-title,
+:root:not(.light-mode) .cv-intro h1 {
+    background: linear-gradient(135deg, #F9FAFB 0%, var(--resume-dark-primary) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+}
+
+:root:not(.light-mode) .section-title {
+    color: var(--resume-dark-text);
+}
+
+:root:not(.light-mode) .tab-btn,
+:root:not(.light-mode) .filter-btn {
+    background-color: var(--resume-dark-surface);
+    color: var(--resume-dark-text-secondary);
+}
+
+:root:not(.light-mode) .timeline-content,
+:root:not(.light-mode) .cv-container,
+:root:not(.light-mode) .organization-card,
+:root:not(.light-mode) .certificate-card {
+    background-color: var(--resume-dark-card);
+    border-color: var(--resume-dark-border);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+:root:not(.light-mode) .timeline-item:nth-child(odd) .timeline-content::before {
+    border-color: transparent transparent transparent var(--resume-dark-card);
+}
+
+:root:not(.light-mode) .timeline-item:nth-child(even) .timeline-content::before {
+    border-color: transparent var(--resume-dark-card) transparent transparent;
+}
+
+:root:not(.light-mode) .timeline-title,
+:root:not(.light-mode) .cv-section h3,
+:root:not(.light-mode) .organization-title,
+:root:not(.light-mode) .certificate-title,
+:root:not(.light-mode) .cv-skill-category h4,
+:root:not(.light-mode) .organization-responsibilities h4 {
+    color: var(--resume-dark-text);
+}
+
+:root:not(.light-mode) .timeline-description,
+:root:not(.light-mode) .cv-intro p,
+:root:not(.light-mode) .cv-item-description,
+:root:not(.light-mode) .organization-description,
+:root:not(.light-mode) .certificate-description,
+:root:not(.light-mode) .responsibility-item {
+    color: var(--resume-dark-text-secondary);
+}
+
+:root:not(.light-mode) .skill-tags span {
+    background-color: rgba(2, 195, 154, 0.15);
+    color: var(--resume-dark-primary);
+}
+
+:root:not(.light-mode) .organization-responsibilities {
+    background-color: rgba(55, 65, 81, 0.7);
+}
+
+:root:not(.light-mode) .certificate-link,
+:root:not(.light-mode) .organization-role,
+:root:not(.light-mode) .certificate-issuer,
+:root:not(.light-mode) .cv-contact-info div {
+    background-color: rgba(2, 195, 154, 0.15);
+}

@@ -1,0 +1,378 @@
+/* === ENHANCED TYPOGRAPHY AND COLOR SCHEME FOR RESUME === */
+
+/* Set custom font family for the entire resume page */
+.resume-hero-content,
+.resume-content,
+.cv-container,
+.timeline-content,
+.organization-card,
+.certificate-card {
+    font-family: 'Inter', 'Segoe UI', sans-serif;
+}
+
+/* Resume hero section typography */
+.resume-subtitle {
+    color: #00A896;
+    /* Bright teal color that stands out */
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.resume-title {
+    background: linear-gradient(135deg, #1A2238 0%, #00A896 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+}
+
+.resume-description {
+    color: #4A5568;
+    /* Slate gray - easy on the eyes */
+    font-weight: 400;
+    line-height: 1.8;
+}
+
+/* Section titles */
+.section-title {
+    color: #1A2238;
+    /* Dark navy - strong heading color */
+    font-weight: 800;
+    letter-spacing: -0.5px;
+}
+
+.section-title::before {
+    color: rgba(0, 168, 150, 0.05);
+    /* Teal with low opacity for background text */
+}
+
+/* Tab buttons */
+.tab-btn {
+    color: #4A5568;
+    /* Slate gray for inactive state */
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.tab-btn.active,
+.tab-btn:hover {
+    color: white;
+    background: linear-gradient(135deg, #00A896 0%, #02C39A 100%);
+}
+
+/* Timeline typography */
+.timeline-date {
+    background: linear-gradient(135deg, #00A896 0%, #02C39A 100%);
+    color: white;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.timeline-title {
+    color: #1A2238;
+    /* Dark navy */
+    font-weight: 700;
+    letter-spacing: -0.3px;
+}
+
+.timeline-subtitle {
+    color: #00A896;
+    /* Teal */
+    font-weight: 600;
+}
+
+.timeline-description {
+    color: #4A5568;
+    /* Slate gray */
+    line-height: 1.7;
+}
+
+/* CV typography */
+.cv-intro h1 {
+    background: linear-gradient(135deg, #1A2238 0%, #00A896 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+}
+
+.cv-intro h2 {
+    color: #00A896;
+    /* Teal */
+    font-weight: 500;
+}
+
+.cv-intro p {
+    color: #4A5568;
+    /* Slate gray */
+    line-height: 1.7;
+}
+
+.cv-contact-info div {
+    color: #4A5568;
+    /* Slate gray */
+    background-color: rgba(0, 168, 150, 0.08);
+}
+
+.cv-contact-info div i {
+    color: #00A896;
+    /* Teal */
+}
+
+.cv-section h3 {
+    color: #1A2238;
+    /* Dark navy */
+    font-weight: 700;
+    letter-spacing: -0.3px;
+}
+
+.cv-section h3 i {
+    color: #00A896;
+    /* Teal */
+}
+
+.cv-item-title {
+    color: #1A2238;
+    /* Dark navy */
+    font-weight: 700;
+}
+
+.cv-item-subtitle {
+    color: #00A896;
+    /* Teal */
+    font-weight: 600;
+}
+
+.cv-item-date {
+    color: #718096;
+    /* Medium gray */
+    background-color: rgba(113, 128, 150, 0.1);
+    font-weight: 500;
+}
+
+.cv-item-description {
+    color: #4A5568;
+    /* Slate gray */
+    line-height: 1.7;
+}
+
+.cv-skill-category h4 {
+    color: #1A2238;
+    /* Dark navy */
+    font-weight: 700;
+    letter-spacing: -0.2px;
+    border-bottom-color: rgba(0, 168, 150, 0.2);
+}
+
+.skill-tags span {
+    color: #00A896;
+    /* Teal */
+    background-color: rgba(0, 168, 150, 0.08);
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.skill-tags span:hover {
+    color: white;
+    background: linear-gradient(135deg, #00A896 0%, #02C39A 100%);
+}
+
+/* Organization cards typography */
+.organization-title {
+    color: #1A2238;
+    /* Dark navy */
+    font-weight: 700;
+    letter-spacing: -0.3px;
+}
+
+.organization-role {
+    color: #00A896;
+    /* Teal */
+    background-color: rgba(0, 168, 150, 0.08);
+    font-weight: 600;
+}
+
+.organization-date {
+    color: #718096;
+    /* Medium gray */
+    font-size: 0.9rem;
+}
+
+.organization-date i {
+    color: #00A896;
+    /* Teal */
+}
+
+.organization-description {
+    color: #4A5568;
+    /* Slate gray */
+    line-height: 1.7;
+}
+
+.organization-responsibilities h4 {
+    color: #1A2238;
+    /* Dark navy */
+    font-weight: 700;
+}
+
+.organization-responsibilities h4 i {
+    color: #00A896;
+    /* Teal */
+}
+
+.responsibility-item {
+    color: #4A5568;
+    /* Slate gray */
+}
+
+/* Certificate cards typography */
+.certificate-badge {
+    background: linear-gradient(135deg, #00A896 0%, #02C39A 100%);
+    color: white;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.certificate-issuer {
+    color: #00A896;
+    /* Teal */
+    background-color: rgba(0, 168, 150, 0.08);
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.certificate-title {
+    color: #1A2238;
+    /* Dark navy */
+    font-weight: 700;
+    letter-spacing: -0.3px;
+    line-height: 1.4;
+}
+
+.certificate-date {
+    color: #718096;
+    /* Medium gray */
+}
+
+.certificate-date i {
+    color: #00A896;
+    /* Teal */
+}
+
+.certificate-description {
+    color: #4A5568;
+    /* Slate gray */
+    line-height: 1.7;
+}
+
+.certificate-link {
+    color: #00A896;
+    /* Teal */
+    background-color: rgba(0, 168, 150, 0.08);
+    font-weight: 600;
+}
+
+.certificate-link:hover {
+    color: white;
+    background: linear-gradient(135deg, #00A896 0%, #02C39A 100%);
+}
+
+/* Filter buttons */
+.filter-btn {
+    color: #4A5568;
+    /* Slate gray for inactive state */
+    background-color: white;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.filter-btn.active,
+.filter-btn:hover {
+    color: white;
+    background: linear-gradient(135deg, #00A896 0%, #02C39A 100%);
+}
+
+/* Download CV button */
+.cv-download-btn {
+    background: linear-gradient(135deg, #00A896 0%, #02C39A 100%);
+    color: white;
+    font-weight: 600;
+}
+
+.cv-download-btn:hover {
+    box-shadow: 0 10px 25px rgba(0, 168, 150, 0.3);
+}
+
+/* Dark mode color overrides */
+:root:not(.light-mode) .resume-title,
+:root:not(.light-mode) .cv-intro h1 {
+    background: linear-gradient(135deg, #FFFFFF 0%, #02C39A 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+}
+
+:root:not(.light-mode) .section-title {
+    color: #F7FAFC;
+    /* Light gray in dark mode */
+}
+
+:root:not(.light-mode) .section-title::before {
+    color: rgba(2, 195, 154, 0.07);
+    /* Brighter teal with low opacity */
+}
+
+:root:not(.light-mode) .timeline-title,
+:root:not(.light-mode) .cv-section h3,
+:root:not(.light-mode) .organization-title,
+:root:not(.light-mode) .certificate-title,
+:root:not(.light-mode) .cv-skill-category h4,
+:root:not(.light-mode) .organization-responsibilities h4 {
+    color: #F7FAFC;
+    /* Light gray in dark mode */
+}
+
+:root:not(.light-mode) .timeline-description,
+:root:not(.light-mode) .cv-intro p,
+:root:not(.light-mode) .cv-item-description,
+:root:not(.light-mode) .organization-description,
+:root:not(.light-mode) .certificate-description,
+:root:not(.light-mode) .responsibility-item {
+    color: #CBD5E0;
+    /* Lighter slate gray for dark mode */
+}
+
+:root:not(.light-mode) .timeline-subtitle,
+:root:not(.light-mode) .cv-intro h2,
+:root:not(.light-mode) .cv-item-subtitle,
+:root:not(.light-mode) .organization-role,
+:root:not(.light-mode) .certificate-issuer {
+    color: #02C39A;
+    /* Brighter teal for dark mode */
+}
+
+:root:not(.light-mode) .cv-item-date,
+:root:not(.light-mode) .organization-date,
+:root:not(.light-mode) .certificate-date {
+    color: #A0AEC0;
+    /* Light medium gray for dark mode */
+}
+
+:root:not(.light-mode) .skill-tags span {
+    color: #02C39A;
+    /* Brighter teal for dark mode */
+    background-color: rgba(2, 195, 154, 0.15);
+}
+
+:root:not(.light-mode) .certificate-link,
+:root:not(.light-mode) .organization-role,
+:root:not(.light-mode) .certificate-issuer,
+:root:not(.light-mode) .cv-contact-info div {
+    background-color: rgba(2, 195, 154, 0.15);
+}
